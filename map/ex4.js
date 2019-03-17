@@ -23,7 +23,7 @@ où R est le rayon donné en entrée, C et S les valeurs que tu dois calculer.
 
 Exemple de tableau d'entrée :
 
-[1, 3, 4.5, 7]
+[1, 2, 7, 11]
 
 Tableau de sortie correspondant (toFixed transforme les nombres en chaînes)
 
@@ -52,9 +52,17 @@ Tableau de sortie correspondant (toFixed transforme les nombres en chaînes)
 */
 
 function getCirclesProperties(radiuses) {
+  return radiuses.map(n => { return {
+    radius: n,
+    circumference: (2 * Math.PI * n).toFixed(3),
+    surface: (Math.PI * n * n).toFixed(3),
+  }
+  });
 }
 
 
+// Ciconférence  =  2 * Pi * rayon
+// Diamètre      =  Pi * rayon * rayon
 
 // Ne pas modifier l'export
 module.exports = getCirclesProperties;

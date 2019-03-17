@@ -27,8 +27,9 @@ Sortie attendue:
     { name: 'Huawei P20', price: 480 }
   ]
  */
-
 function filterOnPrice(products, maxPrice) {
+let newProduct = products.filter(produit => produit.price <= maxPrice);
+return newProduct	
 }
 
 // Ne pas modifier l'export

@@ -21,7 +21,11 @@ En sortie: [
 
  */
 
-function getStringsLength(strings) {
+function getStringsLength(arr) {
+const longueurMot = arr.map(mot => {
+return mot + " contains " + mot.length + " characters"
+});
+return longueurMot;
 }
 
 // Si besoin, tu peux toujours visualiser le résultat avec console.log,

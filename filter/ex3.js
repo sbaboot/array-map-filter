@@ -22,9 +22,19 @@ Sortie attendue:
   ['Bran Stark', 'Arya Stark', 'Sansa Stark']
 
  */
+function starkFamily(str) {
+if (str.includes("Stark")) {
+return true;
+} else {
+return false;
+}
+}
 
 function keepStarks(names) {
+return names.filter(starkFamily)
 }
+
+
 
 // Ne pas modifier l'export
 module.exports = keepStarks;
