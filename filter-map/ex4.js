@@ -64,9 +64,12 @@ En prenant les deux exemples d'arguments d'entrée, on obtiendrait ceci en sorti
 */
 
 function getActivitiesMembers(activities, persons) {
-
+  let finalObject = [];
+  for(activityName of activities){
+      finalObject.push({activity: activityName, persons: persons.filter( person => person.activities.includes(activityName)).map(person => person.name)});
+  }
+  return finalObject;
 }
-
 
 
 // Ne pas modifier l'export
